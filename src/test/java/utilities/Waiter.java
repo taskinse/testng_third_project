@@ -12,6 +12,7 @@ public class Waiter {
             throw new RuntimeException(e);
         }
     }
+
     public static void waitForVisibilityOfElement(WebElement element, int seconds){
         new WebDriverWait(Driver.getDriver(), seconds).until(ExpectedConditions.visibilityOf(element));
     }

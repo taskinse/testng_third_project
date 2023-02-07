@@ -1,18 +1,16 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import utilities.Driver;
 
 import java.util.List;
 
 public class CarvanaBasePage {
-    public CarvanaBasePage() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
+    public CarvanaBasePage(){
+        PageFactory.initElements(Driver.getDriver(), this);}
+
     @FindBy(css = "div[class*='Logo']")
     public WebElement logoHeader;
 
@@ -52,5 +50,31 @@ public class CarvanaBasePage {
     @FindBy(css = ".result-tile")
     public List<WebElement> resultTile;
 
+    @FindBy(css = ".tk-shell")
+    public List<WebElement> tileBody;
+
+    @FindBy(css = "div[data-qa='base-inventory-type']")
+    public List<WebElement> inventoryType;
+
+    @FindBy(css = ".year-make")
+    public List<WebElement> yearMakeAndModel;
+
+    @FindBy(css = ".trim-mileage")
+    public List<WebElement> trimAndMileage;
+
+    @FindBy(css = "div[data-qa='price']")
+    public List<WebElement> price;
+
+    @FindBy(css = ".monthly-payment")
+    public List<WebElement> monthlyPaymentInfo;
+
+    @FindBy(css = ".down-payment")
+    public List<WebElement> downPaymentInfo;
+
+    @FindBy(css = "div[data-qa='shipping-cost']")
+    public List<WebElement> deliveryChips;
+
+    @FindBy(css = "button[data-cv-test='Cv.Search.Pagination.NextPageButton']")
+    public WebElement nextPageButton;
 
 }
